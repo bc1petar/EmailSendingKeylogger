@@ -1,0 +1,11 @@
+c:\users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\bin\Debug\EmailSendingKeylogger.exe.config
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\bin\Debug\EmailSendingKeylogger.exe
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\bin\Debug\EmailSendingKeylogger.pdb
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\bin\Debug\EmailSendingKeylogger.xml
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.vbprojResolveAssemblyReference.cache
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.Form1.resources
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.Resources.resources
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.vbproj.GenerateResource.Cache
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.exe
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.xml
+C:\Users\ptrmr\documents\visual studio 2015\Projects\EmailSendingKeylogger\EmailSendingKeylogger\obj\Debug\EmailSendingKeylogger.pdb
